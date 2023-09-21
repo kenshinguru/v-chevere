@@ -24,6 +24,8 @@ const limiter = rateLimit({
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
+} else {
+  app.use(morgan('prod'));
 }
 
 app.use(helmet());
